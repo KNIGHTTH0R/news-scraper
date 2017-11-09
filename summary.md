@@ -73,10 +73,10 @@ Once the new articles are stored in the database, I return an array of all the a
 
 
 #### `SlashdotCrawlerService`
-The articles from `http://slashdot.org` had to be retrieved my crawling the site so I used the following to help me:
+The articles from `http://slashdot.org` had to be retrieved by crawling the site so I used the following to help me:
 * `https://github.com/dweidner/laravel-goutte`
 
-Once the site had been crawled, I used the `filter` method to extract content by passing it class names
+Once the site had been crawled, I used the `filter` method to extract content by passing it class selectors
 
 I created an array of recent articles scraped from the site and compared the articles using the article `url` to see which articles are already in the database
 
