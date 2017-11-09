@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Awjudd\FeedReader\FeedReaderServiceProvider::class,
+        Nathanmac\Utilities\Parser\ParserServiceProvider::class,
+        Weidner\Goutte\GoutteServiceProvider::class,
     ],
 
     /*
@@ -226,6 +229,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'FeedReader' => Awjudd\FeedReader\Facade::class,
+        'Parser' => 'Nathanmac\Utilities\Parser\Facades\Parser',
+        'Goutte' => Weidner\Goutte\GoutteFacade::class,
     ],
 
 ];

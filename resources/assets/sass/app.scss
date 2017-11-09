@@ -2,8 +2,66 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
-
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+#navigation {
+    margin: 15px 0;
+}
+
+.article {
+    width: 33%;
+}
+
+.individual {
+    h2 {
+        margin: 0 auto;
+    }
+
+    .articles-container {
+        margin-top: 70px;
+    }
+
+    .show_all {
+        position: absolute;
+        left: 15px;
+        transform: translateY(-50%);
+        top: 50%;
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .links {
+        list-style: none;
+        position: absolute;
+        right: 15px;
+        transform: translateY(-50%);
+        top: 50%;
+
+
+        a {
+            color: #000;
+            text-decoration: underline;
+            margin: 0 3px;
+        }
+
+        a.hide {
+            display: none;
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .card-columns {
+        column-count: 2 !important;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .article {
+        width: 100%;
+    }
+    .card-columns {
+        column-count: 1 !important;
+    }
+}

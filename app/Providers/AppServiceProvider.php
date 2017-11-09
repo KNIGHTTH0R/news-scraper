@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts;
+use App\Services;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(Contracts\BBCNewsServiceInterface::class, Services\BBCNewsService::class);
+        $this->app->bind(Contracts\HackerNewsServiceInterface::class, Services\HackerNewsService::class);
+        $this->app->bind(Contracts\NewsScraperServiceInterface::class, Services\NewsScraperService::class);
+        $this->app->bind(Contracts\SlashDotCrawlerServiceInterface::class, Services\SlashDotCrawlerService::class);
     }
 }
